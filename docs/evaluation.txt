@@ -1,0 +1,72 @@
+BRAIN TUMOUR CLASSIFICATION USING VISION TRANSFORMER (ViT)
+MODEL CONFIGURATION
+Model: google/vit-base-patch16-224-in21k
+Architecture: Vision Transformer (ViT-Base)
+Image Size: 224 x 224
+Number of Classes: 4
+Training Epochs: 3
+Batch Size: 16
+Optimizer: AdamW
+Learning Rate: 0.00002
+Evaluation Device: NVIDIA Tesla T4 GPU
+DATASET
+Training Images: 32,336
+Validation Images: 4,042
+Testing Images: 4,042
+Total Images: 40,420
+Classes:
+Glioma
+Meningioma
+No Tumor
+Pituitary
+TEST SET RESULTS
+Test Accuracy: 87.58%
+Test Loss: 0.2442
+Test Macro Precision: 90.79%
+Test Macro Recall: 90.20%
+Test Macro F1-Score: 90.38%
+Test Weighted Precision: 87.54%
+Test Weighted Recall: 87.58%
+Test Weighted F1-Score: 87.44%
+
+CLASS-WISE EVALUATION
+GLIOMA
+Precision: 86.51%
+Recall: 91.57%
+F1-Score: 88.97%
+Support: 2,158 images
+MENINGIOMA
+Precision: 84.18%
+Recall: 75.58%
+F1-Score: 79.65%
+Support: 1,204 images
+NO TUMOR
+Precision: 98.71%
+Recall: 93.64%
+F1-Score: 96.11%
+Support: 409 images
+PITUITARY
+Precision: 93.77%
+Recall: 100.00%
+F1-Score: 96.79%
+Support: 271 images
+VALIDATION RESULTS
+Validation Accuracy: 88.25%
+Validation Macro F1-Score: 91.13%
+Note: Validation and test metrics are reported separately.
+GENERATED EVALUATION FILES
+confusion_matrix.csv
+test_predictions.csv
+vit_classification_report.txt
+vit_test_results.json
+figures/class_metrics.png
+figures/confusion_matrix.png
+
+MODEL LIMITATIONS
+This project is intended for educational and research purposes.
+The model may make incorrect predictions on unseen MRI images.
+Highlighted image regions are model-attribution visualizations,
+not verified tumour boundaries.
+This system is not a medical diagnostic tool and must not replace
+professional medical advice or radiological assessment.
+
